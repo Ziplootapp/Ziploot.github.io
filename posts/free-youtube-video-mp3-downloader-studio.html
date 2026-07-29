@@ -10,7 +10,7 @@
 
   <title>Build a 100% Free YouTube Video & MP3 Downloader Studio — ZipLoot</title>
 
-  <meta name="description" content="Learn how to build and host your own premium, 100% ad-free YouTube video and MP3 downloader with 4K UHD support, real-time speed tracking, and automated FFmpeg merging." />
+  <meta name="description" content="Build a 100% Free YouTube Video & MP3 Downloader Studio: Step-by-step technical guide by ZipLoot Team." />
 
   <meta name="google-site-verification" content="k_fvxHtRCpprKVYqa3yiGhhtFu8nZwHmb_N_c6q3uC0" />
 
@@ -496,15 +496,15 @@ aside{display:flex;flex-direction:column;gap:22px;position:sticky;top:calc(var(-
 
 .posts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
 
-.posts-grid .post-card-link:first-child{grid-column:span 2;}
+.posts-grid .post-card:first-child{grid-column:span 2;}
 
-.posts-grid .post-card-link:first-child .card-img{height:300px;}
+.posts-grid .post-card:first-child .card-img{height:300px;}
 
 
 
 /* ── POST CARD ──────────────────────────────── */
 
-.post-card{height:100%;background:var(--panel);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .4s cubic-bezier(.34,1.56,.64,1),border-color .3s,box-shadow .4s;}
+.post-card{background:var(--panel);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .4s cubic-bezier(.34,1.56,.64,1),border-color .3s,box-shadow .4s;}
 
 .post-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grd-a);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.34,1.56,.64,1);z-index:4;}
 
@@ -512,7 +512,7 @@ aside{display:flex;flex-direction:column;gap:22px;position:sticky;top:calc(var(-
 
 .post-card:hover::after{transform:scaleX(1);}
 
-.post-card-link{display:block;text-decoration:none;color:inherit;border-radius:22px;height:100%;}
+.post-card-link{display:block;text-decoration:none;color:inherit;border-radius:22px;}
 
 
 
@@ -839,8 +839,6 @@ footer::before{content:'';position:absolute;top:-1px;left:50%;transform:translat
 
 @media(max-width:768px){
   .ad-block-728{display:none!important;}
-  aside{display:none!important;}
-  .sticky-ad-bar{display:none!important;}
 
   header{padding:6px 8px;}
 
@@ -880,65 +878,85 @@ footer::before{content:'';position:absolute;top:-1px;left:50%;transform:translat
 
   .nav-links li a{
 
-    padding:6px 12px;
+    font-size:11px;padding:5px 10px;white-space:nowrap;
 
-    font-size:12px;
+    background:rgba(255,255,255,0.06);
 
-    white-space:nowrap;
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:8px;
+
+    -webkit-text-fill-color:var(--ink-2);
 
   }
 
+  .nav-links li a:hover{-webkit-text-fill-color:#fff;}
 
-
-  .wrap{padding:0 14px;}
-
-  .post-body-wrap{padding:20px 16px;}
-
-  .post-cover-inner{padding:24px 16px 20px;}
-
-  .post-meta-bar{padding:12px 16px;}
-
-  .post-full-title{font-size:24px;}
-
-  .post-body{font-size:15px;line-height:1.75;}
-
-  .post-body h2{font-size:20px;margin:28px 0 12px;}
-
-  .post-body h3{font-size:17px;}
-
-  .post-body pre{padding:14px;margin:16px 0;}
-
-  .post-body pre code{font-size:12px;}
-
-  .post-body p{text-align:left;}
+  .nav-cta{-webkit-text-fill-color:#fff!important;}
 
 
 
-  .footer-inner{flex-direction:column;gap:20px;}
+  .wrap{padding-left:16px!important;padding-right:16px!important;}
 
-  .footer-nav{gap:14px;}
+
+
+  .post-cover-inner{padding:24px 18px 20px!important;}
+
+
+
+  .post-full-title{font-size:clamp(20px,5.5vw,28px)!important;line-height:1.25!important;letter-spacing:-0.5px!important;}
+
+
+
+  .post-meta-bar{padding:12px 18px!important;}
+
+
+
+  .post-body-wrap{padding:20px 18px!important;}
+
+
+
+  .post-body{font-size:16px!important;line-height:1.85!important;}
+
+
+
+  .post-body p{text-align:left!important;margin-bottom:18px!important;}
+
+
+
+  .post-body li{font-size:15px!important;margin-bottom:8px!important;}
 
 
 
   .ad-block-728{display:none!important;}
 
-  .ad-block-728 iframe{
+  .sticky-ad-bar{display:none!important;}
 
-    transform:scale(0.44);
 
-    transform-origin:center center;
 
-  }
+  .hero-title{font-size:clamp(28px,7vw,38px);letter-spacing:-1px;}
 
-  .sticky-ad-bar iframe{
+  .hero-title .line2{white-space:normal;}
 
-    transform:scale(0.44);
+  .hero-stats{gap:24px;}
 
-    transform-origin:center center;
 
-  }
+
+  .ad-break{margin:24px -18px;padding:18px;}
 
 }
+
+
+
+@media(max-width:480px){
+
+  .posts-grid .post-card:first-child{grid-column:span 1;}
+
+  .posts-grid .post-card:first-child .card-img{height:200px;}
+
+}
+
+
 
 
 
@@ -971,6 +989,8 @@ footer::before{content:'';position:absolute;top:-1px;left:50%;transform:translat
 .copy-btn:hover{background:rgba(129,140,248,0.3);color:#fff;border-color:rgba(129,140,248,0.6);}
 
 .copy-btn.copied{background:rgba(74,222,128,0.2);color:#4ade80;border-color:rgba(74,222,128,0.4);}
+
+
 
 
 
@@ -1060,7 +1080,7 @@ footer::before{content:'';position:absolute;top:-1px;left:50%;transform:translat
 
 .nav-item-dropdown.active .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(8px); }
 
-  </style>
+</style>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -1086,23 +1106,23 @@ footer::before{content:'';position:absolute;top:-1px;left:50%;transform:translat
 
   <meta property="og:url" content="https://ziploot.vercel.app/posts/free-youtube-video-mp3-downloader-studio.html" />
 
-  <meta property="og:title" content="AI Video & Image Watermark Remover: Build Free LaMa & ProPainter Inpainting Engine — ZipLoot" />
+  <meta property="og:title" content="Download TikTok, Instagram & Twitter Videos Free: Build Your Own Ad-Free Video Downloader — ZipLoot" />
 
-  <meta property="og:description" content="Remove watermarks from AI-generated videos and images (Google Imagen, Sora, Runway, CapCut, TikTok) for free using open-source LaMa and ProPainter AI inpainting engines." />
+  <meta property="og:description" content="Download TikTok, Instagram & Twitter Videos Free: Build Your Own Ad-Free Video Downloader: Step-by-step technical guide by ZipLoot Team." />
 
-  <meta property="og:image" content="https://ziploot.vercel.app/images/ai_watermark_remover_cover.webp" />
+  <meta property="og:image" content="https://ziploot.vercel.app/images/adfree_downloader_hero.webp" />
 
   <meta name="twitter:card" content="summary_large_image" />
 
-  <meta name="twitter:title" content="AI Video & Image Watermark Remover: Build Free LaMa & ProPainter Inpainting Engine — ZipLoot" />
+  <meta name="twitter:title" content="Download TikTok, Instagram & Twitter Videos Free: Build Your Own Ad-Free Video Downloader — ZipLoot" />
 
-  <meta name="twitter:description" content="Remove watermarks from AI-generated videos and images (Google Imagen, Sora, Runway, CapCut, TikTok) for free using open-source LaMa and ProPainter AI inpainting engines." />
+  <meta name="twitter:description" content="Download TikTok, Instagram & Twitter Videos Free: Build Your Own Ad-Free Video Downloader: Step-by-step technical guide by ZipLoot Team." />
 
-  <meta name="twitter:image" content="https://ziploot.vercel.app/images/ai_watermark_remover_cover.webp" />
+  <meta name="twitter:image" content="https://ziploot.vercel.app/images/adfree_downloader_hero.webp" />
 
   <link rel="canonical" href="https://ziploot.vercel.app/posts/free-youtube-video-mp3-downloader-studio.html" />
 
-  <script type="application/ld+json">
+    <script type="application/ld+json">
 
   {
 
@@ -1110,15 +1130,15 @@ footer::before{content:'';position:absolute;top:-1px;left:50%;transform:translat
 
     "@type": "Article",
 
-    "headline": "AI Video & Image Watermark Remover: Build Free LaMa & ProPainter Inpainting Engine — ZipLoot",
+    "headline": "Download TikTok, Instagram & Twitter Videos Free: Build Your Own Ad-Free Video Downloader — ZipLoot",
 
-    "description": "Remove watermarks from AI-generated videos and images (Google Imagen, Sora, Runway, CapCut, TikTok) for free using open-source LaMa and ProPainter AI inpainting engines.",
+    "description": "Download TikTok, Instagram & Twitter Videos Free: Build Your Own Ad-Free Video Downloader: Step-by-step technical guide by ZipLoot Team.",
 
-    "image": "https://ziploot.vercel.app/images/ai_watermark_remover_cover.webp",
+    "image": "https://ziploot.vercel.app/images/adfree_downloader_hero.webp",
 
     "url": "https://ziploot.vercel.app/posts/free-youtube-video-mp3-downloader-studio.html",
 
-    "dateModified": "2026-07-21",
+    "dateModified": "2026-07-20",
 
     "author": {
 
@@ -1207,6 +1227,8 @@ function smoothScrollToFAQ(e) {
 
 
 
+  
+
   <!-- Floating Glass Navbar -->
 
   <header>
@@ -1258,89 +1280,40 @@ function smoothScrollToFAQ(e) {
         <li class="mobile-only"><a href="/ai-image-generator">AI Generator</a></li>
 
         <li class="mobile-only"><a href="/pdf-toolset">PDF Tools</a></li>
-
         <li class="mobile-only"><a href="https://ziploot.github.io/unlimited-image-translator/">Image Translator</a></li>
-
-        
-
         <li><a href="https://ziploot.github.io/admin.html" class="nav-cta">Link Short</a></li>
-
       </ul>
-
     </div>
-
   </header>
-
-
-
   <!-- NATIVE AD AT VERY TOP OF POST PAGE ABOVE COVER -->
-
   <div class="wrap" style="padding-top: 10px;">
-
-    <div class="native-ad-wrap" style="margin: 10px auto 12px;">
-
-      <span class="ad-tag">Sponsored Links</span>
-
-      <script async="async" data-cfasync="false" src="https://pl30429916.effectivecpmnetwork.com/ec52137b60b75c0fc5150124af23e531/invoke.js"></script>
-
-      <div id="container-ec52137b60b75c0fc5150124af23e531"></div>
-
-    </div>
-
+<div class="native-ad-wrap" style="margin: 10px auto 12px;">
+  <span class="ad-tag">Sponsored Links</span>
+  <script async="async" data-cfasync="false" src="https://pl30429916.effectivecpmnetwork.com/ec52137b60b75c0fc5150124af23e531/invoke.js"></script>
+  <div id="container-ec52137b60b75c0fc5150124af23e531"></div>
+</div>
   </div>
-
-
-
   <!-- Main Article Wrap -->
-
   <div class="wrap">
-
     <div class="page-layout">
-
-      
-
       <!-- Main Content Column -->
-
       <main class="main-col">
-
-
-
         <article class="post-full">
-
-          <div class="post-cover" style="background-image: url('../images/ai_watermark_remover_cover.webp');">
-
+          <div class="post-cover" style="background-image: url('https://ziploot.vercel.app/images/youtube_downloader_hero.jpg');">
             <div class="post-cover-inner">
-
-              <span class="post-cat-chip">ZIPLOOT AI TOOLS GUIDE</span>
-
-              <h1 class="hero-title">Build a 100% Free YouTube Video & MP3 Downloader Studio</h1>
-
+              <span class="post-cat-chip">ZIPLOOT API TOOLS</span>
+              <h1 class="post-full-title">Build a 100% Free YouTube Video & MP3 Downloader Studio</h1>
             </div>
-
           </div>
-
-
-
           <div class="post-meta-bar">
-
             <span>BY ZIPLOOT TEAM</span>
-
             <span class="meta-dot"></span>
-
             <span>JULY 2026</span>
-
             <span class="meta-dot"></span>
-
             <span>VERIFIED &amp; TESTED</span>
-
           </div>
-
-
-
           <!-- Top 728x90 Banner Ad below Cover -->
-
           <div class="ad-block-728">
-
             <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style>
 <style>
 .faq-jump-btn-inline {
@@ -1389,60 +1362,45 @@ function smoothScrollToFAQ(e) {
   }
 }
 </script>
-
 </head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script></body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
-
           </div>
-
-
-
           <div class="post-body-wrap">
-
             <div class="post-body">
-
               <article>
-          <!-- Hidden cover image for thumbnail parser -->
-          <div style="display: none;">
-            <img loading="lazy" alt="Build a 100% Free YouTube Video & MP3 Downloader Studio" src="../images/youtube_downloader_hero.jpg" />
-          </div>
+  <!-- Hidden cover image for thumbnail parser -->
+  <div style="display: none;">
+    <img loading="lazy" alt="Build a 100% Free YouTube Video & MP3 Downloader Studio" src="../images/youtube_downloader_hero.jpg" />
+  </div>
+  <!-- Quick Technical Summary -->
+  <div class="quick-summary" style="background: rgba(129, 140, 248, 0.05); border-left: 4px solid #818cf8; padding: 22px; border-radius: 0 16px 16px 0; margin: 0 0 25px 0; font-family: 'Inter', sans-serif; color: #cbd5e1;">
+    <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Technical Summary</h3>
+    <p>Most free YouTube downloaders on the internet are plagued with malicious redirects, aggressive popup ads, 360p quality caps, and broken audio tracks. In this comprehensive developer guide, we reverse-engineer the ultimate self-hostable <strong>100% Free YouTube Video &amp; MP3 Downloader Studio</strong> supporting up to 4K UHD 60fps video downloads, high-bitrate 320kbps MP3 extraction, and automated FFmpeg audio-video merging with complete source code and 1-click installer scripts. <a href="#faq-section" onclick="smoothScrollToFAQ(event)" class="faq-jump-btn-inline" title="Jump to FAQs">💬 FAQs &amp; Solutions ↓</a></p>
+  </div>
+  <!-- 1-Click Automated Setup Box -->
+  <div class="quick-summary" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; padding: 22px; border-radius: 0 16px 16px 0; margin: 0 0 35px 0; font-family: 'Inter', sans-serif; color: #cbd5e1;">
+    <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">🚀 1-Click Multi-OS Auto-Installer (Recommended)</h3>
+    <p style="margin-bottom: 15px;">To download dependencies, setup virtual environment, and launch your YouTube Downloader Studio in 1-click, run the command for your OS:</p>
+    <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">For Windows (PowerShell):</h4>
+    <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin-bottom: 15px;"><code>iwr -useb "https://github.com/Ziplootapp/youtube-video-mp3-downloader/archive/refs/heads/main.zip" -OutFile "$env:TEMP\yt.zip"; Expand-Archive -Path "$env:TEMP\yt.zip" -DestinationPath "$env:TEMP\yt-app" -Force; Set-Location "$env:TEMP\yt-app\youtube-video-mp3-downloader-main"; .\deploy_windows.bat</code></pre>
+    <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">For Linux &amp; macOS (Bash):</h4>
+    <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin: 0;"><code>curl -sL https://github.com/Ziplootapp/youtube-video-mp3-downloader/archive/refs/heads/main.zip -o /tmp/yt.zip &amp;&amp; unzip -o /tmp/yt.zip -d /tmp/yt-app &amp;&amp; cd /tmp/yt-app/youtube-video-mp3-downloader-main &amp;&amp; chmod +x deploy_linux.sh &amp;&amp; ./deploy_linux.sh</code></pre>
+  </div>
+  <!-- Manual Step-by-Step Code Setup -->
+  <section id="manual-installation" style="margin-bottom: 40px; font-family: 'Inter', sans-serif; color: #cbd5e1;">
+    <h2 style="font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 15px;">🛠️ Manual Step-by-Step Code Setup</h2>
+    <p style="margin-bottom: 20px;">If you prefer creating the files manually on your machine or deploying to a cloud VPS server, follow the 3 steps below to write the complete backend engine and frontend web studio interface.</p>
 
-          
-<div class="quick-summary" style="background: rgba(129, 140, 248, 0.05); border-left: 4px solid #818cf8; padding: 22px; border-radius: 0 16px 16px 0; margin: 0 0 25px 0; font-family: 'Inter', sans-serif; color: #cbd5e1;">
-  <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Technical Summary</h3>
-  <p>Most free YouTube downloaders on the internet are plagued with malicious redirects, aggressive popup ads, 360p quality caps, and broken audio tracks. In this comprehensive developer guide, we reverse-engineer the ultimate self-hostable <strong>100% Free YouTube Video &amp; MP3 Downloader Studio</strong> supporting up to 4K UHD 60fps video downloads, high-bitrate 320kbps MP3 extraction, and automated FFmpeg audio-video merging with complete source code and 1-click installer scripts. <a href="#faq-section" onclick="smoothScrollToFAQ(event)" class="faq-jump-btn-inline" title="Jump to FAQs">💬 FAQs &amp; Solutions ↓</a></p>
-</div>
-
-          
-<div class="quick-summary" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; padding: 22px; border-radius: 0 16px 16px 0; margin: 0 0 35px 0; font-family: 'Inter', sans-serif; color: #cbd5e1;">
-  <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">🚀 1-Click Multi-OS Auto-Installer (Recommended)</h3>
-  <p style="margin-bottom: 15px;">To download dependencies, setup virtual environment, and launch your YouTube Downloader Studio in 1-click, run the command for your OS:</p>
-  
-  <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">For Windows (PowerShell):</h4>
-  <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin-bottom: 15px;"><code>iwr -useb "https://github.com/Ziplootapp/youtube-video-mp3-downloader/archive/refs/heads/main.zip" -OutFile "$env:TEMP\yt.zip"; Expand-Archive -Path "$env:TEMP\yt.zip" -DestinationPath "$env:TEMP\yt-app" -Force; Set-Location "$env:TEMP\yt-app\youtube-video-mp3-downloader-main"; .\deploy_windows.bat</code></pre>
-
-  <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">For Linux &amp; macOS (Bash):</h4>
-  <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin: 0;"><code>curl -sL https://github.com/Ziplootapp/youtube-video-mp3-downloader/archive/refs/heads/main.zip -o /tmp/yt.zip &amp;&amp; unzip -o /tmp/yt.zip -d /tmp/yt-app &amp;&amp; cd /tmp/yt-app/youtube-video-mp3-downloader-main &amp;&amp; chmod +x deploy_linux.sh &amp;&amp; ./deploy_linux.sh</code></pre>
-</div>
-
-          
-<section id="manual-installation" style="margin-bottom: 40px; font-family: 'Inter', sans-serif; color: #cbd5e1;">
-  <h2 style="font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 15px;">🛠️ Manual Step-by-Step Code Setup</h2>
-  <p style="margin-bottom: 20px;">If you prefer creating the files manually on your machine or deploying to a cloud VPS server, follow the 3 steps below to write the complete backend engine and frontend web studio interface.</p>
-
-  <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 25px 0 10px 0;">Step 1: Create <code>requirements.txt</code></h3>
-  <div style="position: relative;">
+    <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 25px 0 10px 0;">Step 1: Create <code>requirements.txt</code></h3>
     <pre style="background: #090d16; border: 1px solid rgba(255,255,255,0.08); padding: 16px; border-radius: 10px; font-family: 'Space Mono', monospace; font-size: 13px; color: #e2e8f0; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 25px;"><code>flask>=3.0.0
 flask-cors>=4.0.0
 yt-dlp>=2026.01.01
 pillow>=10.0.0</code></pre>
-  </div>
 
-  <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 25px 0 10px 0;">Step 2: Create Python Backend Engine (<code>app.py</code>)</h3>
-  <p style="margin-bottom: 12px;">This script powers the core extraction engine using <code>yt-dlp</code> and invokes <code>FFmpeg</code> to merge high-resolution 4K video streams with high-bitrate audio:</p>
-  <div style="position: relative;">
+    <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 25px 0 10px 0;">Step 2: Create Python Backend Engine (<code>app.py</code>)</h3>
+    <p style="margin-bottom: 12px;">This script powers the core extraction engine using <code>yt-dlp</code> and invokes <code>FFmpeg</code> to merge high-resolution 4K video streams with high-bitrate audio:</p>
     <pre style="background: #090d16; border: 1px solid rgba(255,255,255,0.08); padding: 16px; border-radius: 10px; font-family: 'Space Mono', monospace; font-size: 13px; color: #e2e8f0; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 25px;"><code>import os
 import subprocess
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__, static_folder='.')
@@ -1492,11 +1450,9 @@ def download():
 if __name__ == '__main__':
     print("🚀 ZipLoot YouTube Downloader Engine running on http://127.0.0.1:5000")
     app.run(host='0.0.0.0', port=5000)</code></pre>
-  </div>
 
-  <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 25px 0 10px 0;">Step 3: Create Web Studio UI (<code>index.html</code>)</h3>
-  <p style="margin-bottom: 12px;">Here is the glassmorphism dark UI interface allowing users to paste links, select 4K MP4 or 320kbps MP3, and download seamlessly:</p>
-  <div style="position: relative;">
+    <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 25px 0 10px 0;">Step 3: Create Web Studio UI (<code>index.html</code>)</h3>
+    <p style="margin-bottom: 12px;">Here is the glassmorphism dark UI interface allowing users to paste links, select 4K MP4 or 320kbps MP3, and download seamlessly:</p>
     <pre style="background: #090d16; border: 1px solid rgba(255,255,255,0.08); padding: 16px; border-radius: 10px; font-family: 'Space Mono', monospace; font-size: 13px; color: #e2e8f0; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 25px;"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -1536,32 +1492,32 @@ if __name__ == '__main__':
   &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-  </div>
-</section>
+  </section>
 
+  <!-- Project Specifications & Key Features -->
+  <section id="key-specs" style="margin-bottom: 35px; font-family: 'Inter', sans-serif; color: #cbd5e1;">
+    <h2 style="font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 15px;">Project Specifications &amp; Key Features</h2>
+    <ul style="padding-left: 20px; margin-bottom: 20px;">
+      <li style="margin-bottom: 8px;"><strong>4K UHD 60fps Video Downloads:</strong> Native support for downloading high-resolution video streams up to 2160p 4K 60fps.</li>
+      <li style="margin-bottom: 8px;"><strong>320kbps MP3 Audio Extraction:</strong> Direct high-bitrate audio extraction for YouTube music and podcasts.</li>
+      <li style="margin-bottom: 8px;"><strong>Automated FFmpeg Stream Merging:</strong> Automatically merges separate video and audio tracks into a seamless MP4 file.</li>
+      <li style="margin-bottom: 8px;"><strong>100% Ad-Free &amp; Private:</strong> Self-hostable studio running locally on Python Flask with zero third-party tracking or redirects.</li>
+    </ul>
+  </section>
 
-          <section id="key-specs" style="margin-bottom: 35px; font-family: 'Inter', sans-serif; color: #cbd5e1;">
-            <h2 style="font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 15px;">Project Specifications &amp; Key Features</h2>
-            <ul style="padding-left: 20px; margin-bottom: 20px;">
-              <li style="margin-bottom: 8px;"><strong>4K UHD 60fps Video Downloads:</strong> Native support for downloading high-resolution video streams up to 2160p 4K 60fps.</li>
-              <li style="margin-bottom: 8px;"><strong>320kbps MP3 Audio Extraction:</strong> Direct high-bitrate audio extraction for YouTube music and podcasts.</li>
-              <li style="margin-bottom: 8px;"><strong>Automated FFmpeg Stream Merging:</strong> Automatically merges separate video and audio tracks into a seamless MP4 file.</li>
-              <li style="margin-bottom: 8px;"><strong>100% Ad-Free &amp; Private:</strong> Self-hostable studio running locally on Python Flask with zero third-party tracking or redirects.</li>
-            </ul>
-          </section>
-
-          <section id="faq-section">
-            <h2 class="faq-title">Frequently Asked Questions (FAQs)</h2>
-            <details>
-              <summary>Is this YouTube Downloader 100% free?</summary>
-              <p>Yes! Because you self-host the open-source engine locally on Python and FFmpeg, it is 100% free with no subscription or download limits.</p>
-            </details>
-            <details>
-              <summary>Can I download 4K videos with audio?</summary>
-              <p>Yes. YouTube stores 4K video and high-quality audio streams separately. Our built-in FFmpeg engine automatically merges them into a single crisp MP4 file.</p>
-            </details>
-          </section>
-        </article>
+  <!-- FAQ Section -->
+  <section id="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions (FAQs)</h2>
+    <details>
+      <summary>Is this YouTube Downloader 100% free?</summary>
+      <p>Yes! Because you self-host the open-source engine locally on Python and FFmpeg, it is 100% free with no subscription or download limits.</p>
+    </details>
+    <details>
+      <summary>Can I download 4K videos with audio?</summary>
+      <p>Yes. YouTube stores 4K video and high-quality audio streams separately. Our built-in FFmpeg engine automatically merges them into a single crisp MP4 file.</p>
+    </details>
+  </section>
+</article>
 
             </div>
 
@@ -1576,6 +1532,8 @@ if __name__ == '__main__':
 
 
       <!-- Sidebar Column (SPONSORED TOP) -->
+
+      
 
       <aside>
 
@@ -1634,7 +1592,7 @@ function smoothScrollToFAQ(e) {
 }
 </script>
 
-</head><body><script>atOptions = {'key' : '9eeb068e8f4c466d8f060f01b578dec1','format' : 'iframe','height' : 250,'width' : 300,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script></body></html>" width="300" height="250" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
+</head><body><script>atOptions = {'key' : '9eeb068e8f4c466d8f060f01b578dec1','format' : 'iframe','height' : 250,'width' : 300,'params' : {}};</script><script src='https://www.highperformanceformat.com/9eeb068e8f4c466d8f060f01b578dec1/invoke.js'></script></body></html>" width="300" height="250" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
 
           </div>
 
@@ -1688,6 +1646,8 @@ function smoothScrollToFAQ(e) {
 
 
 
+
+
     </div>
 
   </div>
@@ -1696,11 +1656,13 @@ function smoothScrollToFAQ(e) {
 
   <!-- Sticky Footer Ad Bar -->
 
-  <div class="sticky-ad-bar" id="stickyAdBar">
+  
 
-    <button class="sticky-close" onclick="document.getElementById('stickyAdBar').style.display='none'">✕</button>
+<div class="sticky-ad-bar" id="stickyAdBar">
 
-    <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style>
+  <button class="sticky-close" onclick="document.getElementById('stickyAdBar').style.display='none'">✕</button>
+
+  <iframe srcdoc="<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style>
 <style>
 .faq-jump-btn-inline {
   display: inline-flex;
@@ -1751,13 +1713,15 @@ function smoothScrollToFAQ(e) {
 
 </head><body><script>atOptions = {'key' : '07443fff7d70e04b3642773f8f97367f','format' : 'iframe','height' : 90,'width' : 728,'params' : {}};</script><script src='https://www.highperformanceformat.com/07443fff7d70e04b3642773f8f97367f/invoke.js'></script></body></html>" width="728" height="90" frameborder="0" scrolling="no" style="border:none;overflow:hidden;" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"></iframe>
 
-  </div>
+</div>
+
+
 
 
 
   <!-- Footer -->
 
-  <footer style="text-align: center; padding: 48px 0 40px; border-top: 1px solid var(--border); color: var(--ink-3); font-family: var(--font-m); font-size: 11px; letter-spacing: 1px;">
+  <footer style="text-align: center; padding: 25px 24px; border-top: 1px solid var(--border); color: var(--ink-3); font-family: var(--font-m); font-size: 11px; letter-spacing: 1px;">
 
     &copy; 2026 ZIPLOOT PLATFORM &bull; ALL RIGHTS RESERVED
 
@@ -1765,7 +1729,11 @@ function smoothScrollToFAQ(e) {
 
 
 
-  <!-- Social Bar: Loaded natively after window load -->
+  <!-- Social Bar Ad -->
+
+  
+
+  <!-- Social Bar: Loaded natively after window load to prevent script conflicts -->
 
   <script>
 
@@ -1783,55 +1751,63 @@ function smoothScrollToFAQ(e) {
 
 
 
-  <!-- Auto Copy Button JS Script -->
 
-  <script>
 
-  (function(){
 
-    document.querySelectorAll('pre').forEach(function(pre){
 
-      var wrap = document.createElement('div');
 
-      wrap.className = 'code-block-wrap';
 
-      wrap.style.position = 'relative';
+<script>
 
-      pre.parentNode.insertBefore(wrap, pre);
+(function(){
 
-      wrap.appendChild(pre);
+  document.querySelectorAll('pre').forEach(function(pre){
 
-      
+    // wrap in relative div
 
-      var btn = document.createElement('button');
+    var wrap = document.createElement('div');
 
-      btn.className = 'copy-btn';
+    wrap.className = 'code-block-wrap';
 
-      btn.textContent = 'COPY';
+    wrap.style.position = 'relative';
 
-      btn.addEventListener('click', function(){
+    pre.parentNode.insertBefore(wrap, pre);
 
-        var code = pre.querySelector('code') ? pre.querySelector('code').innerText : pre.innerText;
+    wrap.appendChild(pre);
 
-        navigator.clipboard.writeText(code).then(function(){
+    // create button
 
-          btn.textContent = 'COPIED ✓';
+    var btn = document.createElement('button');
 
-          btn.classList.add('copied');
+    btn.className = 'copy-btn';
 
-          setTimeout(function(){ btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 2000);
+    btn.textContent = 'COPY';
 
-        });
+    btn.addEventListener('click', function(){
+
+      var code = pre.querySelector('code') ? pre.querySelector('code').innerText : pre.innerText;
+
+      navigator.clipboard.writeText(code).then(function(){
+
+        btn.textContent = 'COPIED ✓';
+
+        btn.classList.add('copied');
+
+        setTimeout(function(){ btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 2000);
 
       });
 
-      wrap.appendChild(btn);
-
     });
 
-  })();
+    wrap.appendChild(btn);
 
-  </script>
+  });
+
+})();
+
+</script>
+
+
 
 
 
@@ -1853,6 +1829,8 @@ function smoothScrollToFAQ(e) {
 
             e.stopPropagation();
 
+            // Toggle active state for this dropdown, close others
+
             dropdowns.forEach(other => {
 
               if (other !== dd) other.classList.remove("active");
@@ -1866,6 +1844,8 @@ function smoothScrollToFAQ(e) {
         }
 
       });
+
+      // Close dropdown when clicking outside
 
       document.addEventListener("click", () => {
 
