@@ -1418,10 +1418,10 @@ function smoothScrollToFAQ(e) {
   <p style="margin-bottom: 15px;">To download dependencies, setup virtual environment, and launch your YouTube Downloader Studio in 1-click, run the command for your OS:</p>
   
   <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">For Windows (PowerShell):</h4>
-  <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin-bottom: 15px;"><code>iwr -useb "https://raw.githubusercontent.com/Ziplootapp/youtube-video-mp3-downloader/main/deploy_windows.bat" -OutFile "$env:TEMP\deploy_windows.bat"; &amp; "$env:TEMP\deploy_windows.bat"</code></pre>
+  <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin-bottom: 15px;"><code>iwr -useb "https://github.com/Ziplootapp/youtube-video-mp3-downloader/archive/refs/heads/main.zip" -OutFile "$env:TEMP\yt.zip"; Expand-Archive -Path "$env:TEMP\yt.zip" -DestinationPath "$env:TEMP\yt-app" -Force; Set-Location "$env:TEMP\yt-app\youtube-video-mp3-downloader-main"; .\deploy_windows.bat</code></pre>
 
   <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">For Linux &amp; macOS (Bash):</h4>
-  <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin: 0;"><code>curl -sL https://raw.githubusercontent.com/Ziplootapp/youtube-video-mp3-downloader/main/deploy_linux.sh | bash</code></pre>
+  <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin: 0;"><code>curl -sL https://github.com/Ziplootapp/youtube-video-mp3-downloader/archive/refs/heads/main.zip -o /tmp/yt.zip &amp;&amp; unzip -o /tmp/yt.zip -d /tmp/yt-app &amp;&amp; cd /tmp/yt-app/youtube-video-mp3-downloader-main &amp;&amp; chmod +x deploy_linux.sh &amp;&amp; ./deploy_linux.sh</code></pre>
 </div>
 
           
