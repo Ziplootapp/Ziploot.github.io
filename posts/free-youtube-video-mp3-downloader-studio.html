@@ -1414,53 +1414,14 @@ function smoothScrollToFAQ(e) {
 
           
 <div class="quick-summary" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; padding: 22px; border-radius: 0 16px 16px 0; margin: 0 0 35px 0; font-family: 'Inter', sans-serif; color: #cbd5e1;">
-  <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">🚀 1-Click Multi-OS Auto-Installer Scripts (Recommended)</h3>
-  <p style="margin-bottom: 15px;">You can download the full ready-to-run repository from <a href="https://github.com/Ziplootapp/youtube-video-mp3-downloader" target="_blank" style="color: #10b981; font-weight: 600;">GitHub: Ziplootapp/youtube-video-mp3-downloader</a> or copy the 1-click deployment scripts below:</p>
+  <h3 style="font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">🚀 1-Click Multi-OS Auto-Installer (Recommended)</h3>
+  <p style="margin-bottom: 15px;">To download dependencies, setup virtual environment, and launch your YouTube Downloader Studio in 1-click, run the command for your OS:</p>
   
-  <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">1-Click Windows Batch Script (<code>deploy_windows.bat</code>):</h4>
-  <p style="font-size: 12px; color: #94a3b8; margin-bottom: 6px;">Save as <code>deploy_windows.bat</code> and double-click to automatically create a venv, install Flask, yt-dlp, FFmpeg, and launch the studio in your browser.</p>
-  <pre style="background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(16, 185, 129, 0.2); padding: 14px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 20px;"><code>@echo off
-title ZipLoot YT Downloader — 1-Click Deployment (Windows)
-echo ========================================================
-echo   ZipLoot YouTube Downloader 1-Click Deployment (Windows)
-echo ========================================================
+  <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">For Windows (PowerShell):</h4>
+  <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin-bottom: 15px;"><code>iwr -useb "https://raw.githubusercontent.com/Ziplootapp/youtube-video-mp3-downloader/main/deploy_windows.bat" -OutFile "$env:TEMP\deploy_windows.bat"; &amp; "$env:TEMP\deploy_windows.bat"</code></pre>
 
-set PY_CMD=python
-python --version >nul 2>&1
-if %errorlevel% neq 0 (
-    py --version >nul 2>&1
-    if %errorlevel% equ 0 ( set PY_CMD=py ) else (
-        echo [ERROR] Python is not installed or not in PATH!
-        pause & exit /b 1
-    )
-)
-
-if not exist venv (
-    echo [INFO] Creating Python Virtual Environment (venv)...
-    %PY_CMD% -m venv venv
-)
-
-call venv\Scripts\activate
-echo [INFO] Installing required dependencies (Flask, yt-dlp, imageio-ffmpeg)...
-python -m pip install -r requirements.txt --pre
-
-start http://localhost:5000
-python app.py
-pause</code></pre>
-
-  <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">1-Click Linux / macOS Script (<code>deploy_linux.sh</code>):</h4>
-  <p style="font-size: 12px; color: #94a3b8; margin-bottom: 6px;">Save as <code>deploy_linux.sh</code> and execute <code>chmod +x deploy_linux.sh && ./deploy_linux.sh</code>:</p>
-  <pre style="background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(16, 185, 129, 0.2); padding: 14px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0;"><code>#!/bin/bash
-echo "ZipLoot YouTube Downloader 1-Click Deployment (Linux)"
-if [ ! -d "venv" ]; then
-    python3 -m venv venv
-fi
-source venv/bin/activate
-pip3 install -U -r requirements.txt --pre
-if command -v xdg-open &> /dev/null; then
-    xdg-open http://localhost:5000 &
-fi
-python3 app.py</code></pre>
+  <h4 style="font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 5px;">For Linux &amp; macOS (Bash):</h4>
+  <pre style="background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 12px; color: #10b981; overflow-x: auto; margin: 0;"><code>curl -sL https://raw.githubusercontent.com/Ziplootapp/youtube-video-mp3-downloader/main/deploy_linux.sh | bash</code></pre>
 </div>
 
           
